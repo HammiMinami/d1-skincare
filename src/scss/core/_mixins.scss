@@ -1,0 +1,52 @@
+@mixin flex-center($justify: center, $align: center, $direction: row, $gap: null) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+
+  @if $gap !=null {
+    gap: $gap;
+  }
+}
+
+@mixin uppercase-heading($size, $line-height: 1, $letter-spacing: -1px) {
+  font-weight: 900;
+  font-size: $size;
+  text-transform: uppercase;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin pill($bg, $color: #000, $padding: 6px 18px) {
+  background-color: $bg;
+  color: $color;
+  padding: $padding;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin card($bg: var(--card-bg), $color: var(--text-black), $padding: 20px, $border-radius: 20px) {
+  background-color: $bg;
+  color: $color;
+  padding: $padding;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 6px #0000001a;
+}
+
+@mixin reset-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+@mixin responsive-text($size, $line-height: 1.4) {
+  font-size: $size;
+  line-height: $line-height;
+
+  @media (max-width: 768px) {
+    font-size: calc($size * 0.9);
+  }
+}

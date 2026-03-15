@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+@use "core/variables" as *;
+@use "core/base" as *;
+@use "core/grid" as *;
+@use "core/utilities" as *;
+@use "components/Header" as *;
+@use "components/Hero" as *;
+@use "components/Routine" as *;
+@use "components/Benefits" as *;
+@use "components/Results" as *;
+@use "components/Comparison" as *;
+@use "components/Set1" as *;
+@use "components/Ingredients" as *;
+@use "components/Formulas" as *;
+@use "components/Testimonials" as *;
+@use "components/Social" as *;
+@use "components/Set2" as *;
+@use "components/Footer" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap");

@@ -1,0 +1,9 @@
+{
+  "name": "D1SkinCare",
+  "version": "1.0.0",
+  "description": "Skin care for men that's simple, effective, and affordable.",
+  "main": "index.js",
+  "keywords": [],
+  "author": "HammiMinami",
+  "type": "commonjs"
+}

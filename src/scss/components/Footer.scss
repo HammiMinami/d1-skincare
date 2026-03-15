@@ -1,0 +1,147 @@
+@use "../core/mixins" as *;
+
+.site-footer {
+  padding: 80px 0 40px;
+  color: var(--text-white);
+  background-color: #222430;
+}
+
+.site-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-cta-head {
+  @include uppercase-heading(1.5rem, 1.2, 0.06em);
+  margin-bottom: 0.5rem;
+}
+
+.footer-cta-sub {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--muted-text);
+  margin-bottom: 2rem;
+}
+
+.newsletter-form {
+  @include flex-center(space-between, stretch, row, 0.5rem);
+  background: var(--input-bg);
+  padding: 5px;
+  margin-bottom: 2rem;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  font-family: var(--font-mono);
+}
+
+.newsletter-form .submit-btn {
+  background: var(--bg-dark-footer);
+  color: var(--text-white);
+  border: none;
+  padding: 0 30px;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.newsletter-form .submit-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px #23272e59;
+}
+
+.social-links {
+  margin-bottom: 4rem;
+}
+
+.social-link {
+  @include flex-center();
+  background: var(--text-white);
+  color: var(--bg-dark-footer);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  margin-right: 15px;
+  transition: opacity 0.2s;
+}
+
+.social-link:hover {
+  opacity: 0.8;
+}
+
+.footer-nav-head {
+  @include uppercase-heading(1.2rem, 1.2, 0.04em);
+  margin-bottom: 1.5rem;
+}
+
+.footer-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-nav-list li {
+  margin-bottom: 10px;
+}
+
+.footer-nav-list a {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: #EFF7FA;
+  text-decoration: none;
+}
+
+.footer-nav-list a:hover {
+  color: #eff7fa;
+}
+
+.footer-bottom {
+  margin-top: 60px;
+  padding-top: 30px;
+  border-top: 1px solid #ffffff0d;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted-text);
+}
+
+.fda-disclaimer {
+  font-size: 0.7rem;
+  border: 1px solid #ffffff1a;
+  padding: 15px;
+  border-radius: 10px;
+  line-height: 1.4;
+}
+
+.logo-footer {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(50deg) brightness(110%) contrast(105%);
+  margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 639px) {
+  .logo-footer {
+    margin-bottom: 2rem;
+  }
+
+  .site-footer {
+    text-align: center;
+  }
+
+  .social-links {
+    @include flex-center();
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    background: #00000000;
+  }
+
+  .newsletter-form .submit-btn {
+    padding: 15px;
+    margin-top: 10px;
+  }
+}

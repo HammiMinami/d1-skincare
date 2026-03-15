@@ -1,0 +1,89 @@
+@use "../core/mixins" as *;
+
+.testimonials-section {
+  background-color: #292a35;
+  color: var(--text-white);
+  padding: 100px 0;
+}
+
+.testimonial-intro {
+  color: var(--primary-yellow);
+  font-family: var(--font-mono);
+  margin-bottom: 3rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.testimonial-card {
+  background-color: var(--card-bg);
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.testimonials-section .star-rating {
+  color: var(--text-black);
+  font-size: 2rem;
+}
+
+.testimonial-text {
+  color: var(--text-black);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+.user-profile {
+  align-items: center;
+  display: flex;
+}
+
+.user-initials {
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 2px solid var(--text-black);
+  color: var(--text-black);
+  display: flex;
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  height: 60px;
+  justify-content: center;
+  margin-right: 15px;
+  width: 60px;
+}
+
+.user-meta {
+  line-height: 1.2;
+}
+
+.user-name {
+  color: var(--text-black);
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+.user-title {
+  color: var(--text-muted);
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 639px) {
+  .testimonials-section {
+    padding: 60px 0;
+  }
+
+  .testimonial-card {
+    margin-bottom: 2rem;
+  }
+}

@@ -1,0 +1,62 @@
+@use "../core/mixins" as *;
+
+.comparison {
+  padding: var(--space-xl) var(--space-md);
+}
+
+.benefit-header {
+  margin-bottom: 1rem;
+}
+
+.benefit-header h2 {
+  @include uppercase-heading(3rem, 1.1, -1px);
+  margin-bottom: 1.5rem;
+  font-family: Inter;
+}
+
+.benefit-header p {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--muted-gray);
+}
+
+.benefit-card {
+  margin-bottom: 2rem;
+}
+
+.benefit-image {
+  border-radius: 30px;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  margin-bottom: 1.5rem;
+  background-color: #e0e0e0;
+}
+
+.benefit-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.benefit-title {
+  @include uppercase-heading(1.4rem, 1.2, -0.5px);
+  margin-bottom: 1rem;
+  font-family: Inter;
+}
+
+.benefit-desc {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--muted-gray);
+}
+
+@media screen and (max-width: 639px) {
+  .benefit-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .benefit-card {
+    margin-bottom: 3.5rem;
+  }
+}

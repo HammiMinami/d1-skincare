@@ -1,0 +1,49 @@
+:root {
+  // Brand palette
+  --color-accent-deep: #cc9c2c;
+  --color-accent: #ffc73a;
+  --color-dark-muted: #11162b;
+  --color-dark-soft: #28345e;
+  --color-dark: #1a2a44;
+  --color-light-muted: #e3e8ef;
+  --color-light: #f7f9fa;
+  --color-secondary: #a0aec0;
+
+  // Typography
+  --font-heading: "Inter Black", "Poppins", "Space Grotesk", "Helvetica Neue", sans-serif;
+  --font-body: "Roboto Mono", "Courier New", Courier, monospace;
+  --font-mono: "Roboto Mono", "Courier New", Courier, monospace;
+
+  // Text
+  --text-white: #ffffff;
+  --text-black: #1a1a1a;
+  --text-dark: #23272e;
+  --text-gray: #555555;
+  --text-muted: #666666;
+  --muted-text: #a0a4b0;
+  --muted-gray: #6b7280;
+
+  // Backgrounds
+  --bg-dark-footer: var(--bg-dark-slate);
+  --bg-dark-slate: linear-gradient(232deg, #464e70 0%, #203746 100%);
+  --bg-dark: #23272e;
+  --bg-light: #f3f8fa;
+  --card-bg: #f3f8fa;
+  --input-bg: #ffffff;
+  --trust-bar-bg: var(--bg-light);
+
+  // Accents
+  --accent-yellow: var(--color-accent);
+  --btn-dark: #22262a;
+  --hero-bg: radial-gradient(circle at center, #2c3e50 0%, #1e2129 100%);
+  --primary-yellow: var(--color-accent);
+
+  // Layout
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --radius-lg: 20px;
+  --radius-sm: 8px;
+  --grid-gap: 1.5rem;
+}

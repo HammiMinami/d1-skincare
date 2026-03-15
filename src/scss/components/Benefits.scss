@@ -1,0 +1,102 @@
+@use "../core/mixins" as *;
+
+.benefits {
+  background: var(--bg-light);
+  padding: var(--space-xl) var(--space-md);
+}
+
+.benefits .section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.benefits .pre-title {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--muted-text);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.benefits .stopwatch-wrapper {
+  @include flex-center();
+  margin-bottom: 1rem;
+}
+
+.benefits .stopwatch-wrapper img {
+  width: 60px;
+}
+
+.benefits .main-title {
+  @include uppercase-heading(3rem, 1, -1px);
+  color: var(--text-black);
+  font-family: Inter;
+  font-size: 80px;
+  font-weight: 900;
+  letter-spacing: -1.33px;
+  text-align: center;
+  line-height: 52px;
+}
+
+.step-container {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.image-wrapper {
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  max-width: 340px;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.step-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: var(--text-white);
+  color: #000;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  @include flex-center();
+  font-weight: bold;
+  box-shadow: 0 2px 10px #0000001a;
+  z-index: 10;
+}
+
+.step-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 0 10px;
+}
+
+.product-thumbnail {
+  width: 40px;
+  flex-shrink: 0;
+}
+
+.step-description {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--text-black);
+}
+
+@media screen and (max-width: 639px) {
+  .benefits .main-title {
+    font-size: 2rem;
+  }
+
+  .step-container {
+    margin-bottom: 3rem;
+  }
+}

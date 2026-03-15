@@ -1,0 +1,98 @@
+@use "../core/mixins" as *;
+
+.set {
+  background: var(--color-light);
+  padding: var(--space-xl) var(--space-md);
+  border-block: 1px solid #000;
+}
+
+.cta-badge {
+  @include pill(var(--primary-yellow));
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.cta-headline {
+  @include uppercase-heading(3.5rem, 1, -1px);
+  margin-bottom: 1.5rem;
+  color: var(--text-black);
+  font-family: Inter;
+}
+
+.cta-body {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-gray);
+  max-width: 480px;
+  margin-bottom: 2rem;
+}
+
+.cta-features {
+  list-style: none;
+  margin: 0 0 2.5rem 0;
+  padding: 0;
+}
+
+.cta-features li {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+.cta-features i {
+  font-size: 1.4rem;
+  margin-right: 12px;
+}
+
+.set .add-to-cart-btn {
+  background-color: var(--btn-dark);
+  color: var(--text-white);
+  padding: 18px 40px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.2s ease;
+}
+
+.set .add-to-cart-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px #1111114d;
+  color: var(--text-white);
+}
+
+.set .price-old {
+  text-decoration: line-through;
+  color: #777;
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+.product-stack {
+  position: relative;
+  text-align: right;
+}
+
+.product-stack img {
+  margin-top: 20px;
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 639px) {
+  .cta-headline {
+    font-size: 2.5rem;
+  }
+
+  .product-stack {
+    margin-top: 3rem;
+    text-align: center;
+  }
+}

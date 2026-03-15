@@ -1,0 +1,135 @@
+@use "../core/mixins" as *;
+
+.skincare-hero {
+  background-color: var(--bg-light);
+  padding: 2rem 0 4rem;
+  font-family: var(--font-body);
+}
+
+.skincare-hero .promo-banner {
+  background-color: var(--primary-yellow);
+  color: var(--text-dark);
+  text-align: center;
+  padding: 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 3rem;
+}
+
+.skincare-hero .promo-banner u {
+  text-underline-offset: 4px;
+}
+
+.skincare-hero .main-title {
+  @include uppercase-heading(clamp(2.5rem, 8vw, 4.5rem), 0.9, -1px);
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  letter-spacing: -1.07px;
+  font-family: Inter;
+  font-size: 80px;
+  font-weight: 900;
+  letter-spacing: -1.33px;
+}
+
+.skincare-hero .description {
+  color: var(--text-gray);
+  max-width: 500px;
+  line-height: 1.4;
+  font-size: 1.05rem;
+  font-family: var(--font-mono);
+}
+
+.skincare-hero .separator {
+  border-bottom: 1px solid #d1dadd;
+  margin: 2rem 0;
+  max-width: 90%;
+}
+
+.skincare-hero .feature-list li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.skincare-hero .feature-list li .check::before {
+  content: "✓";
+  display: inline-block;
+  margin-right: 12px;
+  font-weight: bold;
+  border: 1px solid var(--text-dark);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  font-size: 0.7rem;
+  line-height: 18px;
+}
+
+.skincare-hero .product-visual-wrapper {
+  position: relative;
+  padding: 2rem 0;
+  display: inline-block;
+  max-width: 568px;
+  width: 100%;
+}
+
+.skincare-hero .features-card {
+  background-color: var(--text-white);
+  border-radius: 50px;
+  padding: 60px 40px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px #00000005;
+}
+
+.skincare-hero .feature-item {
+  @include flex-center(center, center, row, 20px);
+  padding: 20px 0;
+}
+
+.skincare-hero .circle-crop {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: #e0e0e0;
+}
+
+.skincare-hero .circle-crop img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.skincare-hero .feature-text {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  line-height: 1.3;
+  color: var(--text-dark);
+  max-width: 200px;
+}
+
+@media screen and (max-width: 639px) {
+  .skincare-hero .features-card {
+    border-radius: 30px;
+    padding: 30px 20px;
+  }
+
+  .skincare-hero .feature-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .skincare-hero .circle-crop {
+    margin-bottom: 15px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .skincare-hero .feature-text {
+    max-width: none;
+  }
+}

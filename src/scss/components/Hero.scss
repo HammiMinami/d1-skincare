@@ -1,0 +1,133 @@
+@use "../core/mixins" as *;
+
+section.hero-banner {
+  background: var(--hero-bg);
+  padding: 120px 0;
+  color: var(--text-white);
+  overflow: hidden;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-title {
+  @include uppercase-heading(5rem, 0.9, -3px);
+  margin-bottom: 1.5rem;
+  font-family: 'Inter';
+  font-weight: 900;
+  font-size: 64px;
+  letter-spacing: -1.07px;
+}
+
+.cta-button-yellow {
+  @include pill(var(--accent-yellow), #000, 18px 45px);
+  border-radius: 40px;
+  font-weight: 900;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 4rem;
+}
+
+.cta-button-yellow:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px #fcbe1159;
+}
+
+.hero-testimonial {
+  max-width: 350px;
+}
+
+.hero-testimonial .star-rating {
+  color: var(--accent-yellow);
+  font-size: 2rem;
+}
+
+.quote-text {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.user-info {
+  @include flex-center(flex-start, center, row, 12px);
+}
+
+.user-badge {
+  width: 35px;
+  height: 35px;
+  border: 1px solid var(--text-white);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.user-handle {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.hero-visual-container {
+  @include flex-center();
+  position: relative;
+}
+
+.floating-products {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 50px 60px #00000080);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  section.hero-banner {
+    text-align: center;
+    padding: 60px 0;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+    letter-spacing: -1px;
+  }
+
+  .hero-testimonial {
+    margin: 0 auto;
+  }
+
+  .user-info {
+    justify-content: center;
+  }
+
+  .hero-visual-container {
+    margin-top: 4rem;
+  }
+}
